@@ -1,6 +1,9 @@
 const express = require("express");
+require("dotenv").config();
 
 const app = express();
+const connectDB = require("./config/db");
+connectDB();
 
 app.use(express.json({ extended: false }));
 app.get("/", (req, res) => res.send("Server up and running"));
