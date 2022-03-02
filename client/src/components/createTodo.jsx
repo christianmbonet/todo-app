@@ -65,7 +65,7 @@ function CreateTodo() {
                         onChange={handleChange}
                         className="input"
                     />
-                    <button type="submit" className="button">
+                    <button type="submit" className="button" onClick={handleSubmit}>
                         create todo
                     </button>
                 </form>
