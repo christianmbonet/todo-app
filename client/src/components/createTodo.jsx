@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./../App.scss";
 
 import axios from "axios";
 
-export function CreateTodo() {
+function CreateTodo() {
     const [data, setData] = useState({ title: "", description: "" });
 
     function handleChange(e) {
@@ -72,3 +73,5 @@ export function CreateTodo() {
         </section>
     );
 }
+
+export default CreateTodo;
