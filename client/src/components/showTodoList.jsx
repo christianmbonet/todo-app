@@ -20,7 +20,7 @@ function TodoCard({ data }) {
     );
 }
 
-export function ShowTodoList() {
+function ShowTodoList() {
     const [todo, setTodo] = useState([]);
 
     useEffect(() => {
@@ -51,3 +51,5 @@ export function ShowTodoList() {
         </section>
     );
 }
+
+export default ShowTodoList;
