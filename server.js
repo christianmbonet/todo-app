@@ -5,9 +5,9 @@ const bodyParser = require("body-parser")
 
 
 const app = express();
-const connectDB = require("./config/db");
+const connectDB = require("./server/config/db");
 
-const todo = require("./routes/todo");
+const todo = require("./server/routes/todo");
 
 connectDB();
 
