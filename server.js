@@ -1,6 +1,8 @@
 const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
+const bodyParser = require("body-parser")
+
 
 const app = express();
 const connectDB = require("./config/db");
@@ -10,6 +12,7 @@ const todo = require("./routes/todo");
 connectDB();
 
 app.use(cors({ origin: true, credentials: true })); 
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api/todo", todo);
 app.use(express.json({ extended: false }));
