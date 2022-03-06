@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-      "node": "v17.6.0"
+      "node": "17.6.0",
+      "yarn": "1.22.x"
+
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
