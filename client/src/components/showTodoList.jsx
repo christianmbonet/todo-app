@@ -14,10 +14,10 @@ function TodoCard({ data, handleEdit, handleDelete }) {
             </div>
 
             <div className="button-container">
-                <button className="button" name={_id} onClick={handleEdit}>
+                <button className="editButton" name={_id} onClick={handleEdit}>
                     edit
                 </button>
-                <button className="button" name={_id} onClick={handleDelete}>
+                <button className="deleteButton" name={_id} onClick={handleDelete}>
                     delete
                 </button>
             </div>
@@ -72,10 +72,10 @@ function ShowTodoList() {
     return (
         <section className="container">
             <Link to="/create-todo" className="button-new">
-                <button className="button">New</button>
+                <button className="button">Add Task</button>
             </Link>
             <section className="contents">
-                <h1>TO-DO LIST</h1>
+                <h1>To Do List</h1>
                 <ul className="list-container">
                     {todo.map((data) => (
                         <TodoCard

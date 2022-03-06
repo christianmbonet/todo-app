@@ -27,6 +27,7 @@ button {
     font-size: calc(10px + 2vmin);
     color: white;
     padding-top: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -47,7 +48,7 @@ button {
     text-transform: capitalize;
 
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 15px;
 
     height: 4rem;
     width: 24rem;
@@ -56,7 +57,26 @@ button {
 .button {
     display: flex;
     margin: 0;
+    font-weight: 500;
+    border: 1px solid lightgrey;
 }
+
+.editButton {
+    display: flex;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 12px;
+    border: solid 1px lightgrey;
+}
+
+.deleteButton {
+    display: flex;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 12px;
+    border: solid 1px lightgrey;
+}
+
 .button-back,
 .button-new {
     width: 8rem;
@@ -88,19 +108,17 @@ button {
 
 .list-container {
     display: flex;
-
+    border-radius: 150px;
     flex-direction: column;
 
     li {
         background-color: hsl(220, 13%, 28%);
-        border-radius: 0.5rem;
-
+        border-radius: 25px;
+        border: solid 1px lightgrey;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
         padding: 2rem;
-
         min-height: 20rem;
         height: max-content;
         width: 24rem !important;
@@ -184,7 +202,7 @@ button {
 
         padding: 2rem 4rem 4rem;
 
-        border-radius: 0.5rem;
+        border-radius: 25px;
 
         .close {
             grid-area: close;
