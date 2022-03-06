@@ -1,1 +1,1 @@
-web: node server.js
+web: cd client && yarn && yarn run build
