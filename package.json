@@ -20,10 +20,10 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "build": "cd client && yarn && yarn run build",
-    "client": "yarn start --prefix client",
+    "client": "cd client && yarn run start",
     "client-install": "yarn install --prefix client",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start\"",
-    "heroku-postbuild": "YARN_PRODUCTION=false yarn install --prefix client && yarn run build --prefix client"
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
