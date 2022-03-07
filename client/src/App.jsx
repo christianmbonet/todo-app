@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ShowTodoList from "./components/ShowTodoList";
-import CreateTodo from "./components/CreateTodo";
+import ShowTodoList from "./components/showTodoList";
+import CreateTodo from "./components/createTodo";
 import "./App.scss";
 
 function App() {
