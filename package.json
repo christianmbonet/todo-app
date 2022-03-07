@@ -17,8 +17,9 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn --prefix client && yarn run build --prefix client"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
