@@ -19,6 +19,7 @@
     "start": "node server.js",
     "server": "node server.js",
     "client": "yarn start --prefix client",
+    "client-install": "yarn --prefix client",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "heroku-postbuild": "YARN_PRODUCTION=false yarn --prefix client && yarn run build --prefix client"
   },
