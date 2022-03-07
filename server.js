@@ -1,7 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
-const path = require('path')
+
 
 
 const app = express();
@@ -29,6 +29,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 })
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
+    console.log(`server is running on http://localhost:${PORT}`);
+});

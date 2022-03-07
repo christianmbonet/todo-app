@@ -18,11 +18,11 @@
   },
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js --exec babel-node --presets babel-preset-env",
+    "server": "nodemon server.js",
     "build": "cd client && yarn && yarn run build",
     "client": "yarn start --prefix client",
     "client-install": "yarn install --prefix client",
-    "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
+    "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn start\"",
     "heroku-postbuild": "YARN_PRODUCTION=false yarn install --prefix client && yarn run build --prefix client"
   },
   "devDependencies": {
