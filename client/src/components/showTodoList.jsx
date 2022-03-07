@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import UpdateTodo  from "./UpdateTodo";
+import UpdateTodo  from "./updateTodo";
 
 function TodoCard({ data, handleEdit, handleDelete }) {
     const { _id, title, description } = data;
