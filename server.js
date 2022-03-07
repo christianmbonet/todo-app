@@ -21,11 +21,9 @@ app.use("/api/todo", todo);
 
 app.get("/", (req, res) => res.send("Server up and running"));
 
-const PORT = process.env.PORT || 8000;
-
-app.listen(PORT, () => {
-    console.log(`server is running on http://localhost:${PORT}`);
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'))
