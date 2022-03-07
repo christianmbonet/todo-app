@@ -19,7 +19,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "node server.js",
-    "build": "cd client && yarn run dev",
+    "build": "cd client && yarn && yarn run build",
     "client": "yarn start --prefix client",
     "client-install": "yarn install --prefix client",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
